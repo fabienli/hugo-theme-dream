@@ -21,4 +21,9 @@
     <i class="large link search icon" onclick="toggleSearch()"></i>
   </div>
   {{ end }}
+  {{ if .Site.Params.enableLink }}
+  <div class="item">
+    <i class="large link {{ .Site.Params.linkIcon }} icon" onclick="location='{{ .Site.Params.linkUrl }}'"></i>
+  </div>
+  {{ end }}
 </nav>
